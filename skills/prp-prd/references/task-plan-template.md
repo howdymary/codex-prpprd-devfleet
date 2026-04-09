@@ -9,11 +9,12 @@
 ## Work Packets
 
 ### Packet 1: <Name>
-- Owner: planner / coder / reviewer / tester / specific agent
+- Owner: planner / coder / reviewer / tester
 - Goal:
 - Files:
-- Dependencies:
+- Dependencies: none | packet N
 - Done when:
+- Dispatch: serial | parallel with packet N
 
 ### Packet 2: <Name>
 - Owner:
@@ -21,21 +22,33 @@
 - Files:
 - Dependencies:
 - Done when:
+- Dispatch: serial | parallel with packet N
 
 ## Ordering
 1. First packet
-2. Second packet
-3. Final verification
+2. Second packet (can parallel with 3)
+3. Third packet (can parallel with 2)
+4. Final verification
 
 ## Parallel Notes
-- What can run in parallel
-- What must stay serialized
+- What can run in parallel (separate file ownership = safe to parallelize)
+- What must stay serialized (shared files or data dependencies)
 
 ## Risks / Blockers
 - Blocker
 - Default fallback
 
 ## Verification Matrix
-- Requirement -> command or check
-- Requirement -> command or check
+
+| Requirement | Verification Command | Owner |
+|-------------|---------------------|-------|
+| {Requirement 1} | `{command}` | coder / tester |
+| {Requirement 2} | `{command}` | coder / tester |
 ```
+
+## Devfleet Integration
+
+When dispatching this plan via `$devfleet`:
+- Each packet with `Dispatch: parallel` can run as a concurrent `codex exec` agent.
+- Packets with dependencies must wait for their blocker to complete.
+- File ownership must be disjoint across parallel packets to avoid merge conflicts.

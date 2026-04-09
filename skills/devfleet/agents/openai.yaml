@@ -1,7 +1,7 @@
 interface:
   display_name: "Devfleet"
-  short_description: "Planner-to-tester workflow for Codex"
-  default_prompt: "Use $devfleet to break this work into planner, coder, reviewer, and tester handoffs."
+  short_description: "Parallel agent dispatch via codex exec"
+  default_prompt: "Use $devfleet to break this work into packets and dispatch parallel agents with planner, coder, reviewer, and tester handoffs."
 
 policy:
   allow_implicit_invocation: true

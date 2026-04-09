@@ -1,7 +1,7 @@
 interface:
   display_name: "Devfleet Planner"
-  short_description: "Plan scoped work packets before coding"
-  default_prompt: "Use $devfleet-planner to turn this task into scoped work packets with ownership and done-when criteria."
+  short_description: "Plan work packets for parallel dispatch"
+  default_prompt: "Use $devfleet-planner to split this task into scoped work packets with disjoint ownership and write them to .devfleet/packets/."
 
 policy:
   allow_implicit_invocation: true

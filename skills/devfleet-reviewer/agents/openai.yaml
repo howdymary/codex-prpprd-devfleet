@@ -1,7 +1,7 @@
 interface:
   display_name: "Devfleet Reviewer"
-  short_description: "Review for bugs, regressions, and gaps"
-  default_prompt: "Use $devfleet-reviewer to review this packet for bugs, regressions, and missing tests."
+  short_description: "Review merged code with handoff context"
+  default_prompt: "Use $devfleet-reviewer to review the merged code, reading .devfleet/handoffs/ for context on what changed."
 
 policy:
   allow_implicit_invocation: true

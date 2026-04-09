@@ -1,10 +1,10 @@
 # Shared Handoff Format
 
-Use this structure for planner, coder, reviewer, and tester outputs when work is being split across roles.
+Every role writes its handoff to `.devfleet/handoffs/<packet-id>.md` using this structure.
 
 ```md
 ## Objective
-- What this packet or handoff is trying to accomplish
+- What this packet or handoff accomplished
 
 ## Scope
 - In scope
@@ -30,9 +30,19 @@ Use this structure for planner, coder, reviewer, and tester outputs when work is
 - What they should look at first
 ```
 
-## Notes by role
+## Notes by Role
 
-- Planner emphasizes scope, ownership, ordering, and done-when criteria.
-- Coder emphasizes changed files, assumptions, and tests run.
-- Reviewer emphasizes findings first, then residual risk.
-- Tester emphasizes exact commands, observed results, and remaining gaps.
+- **Planner** emphasizes scope, ownership, ordering, and done-when criteria.
+- **Coder** emphasizes changed files, assumptions made, tests run, and any scope deviations.
+- **Reviewer** emphasizes findings first (ordered by severity), then residual risk.
+- **Tester** emphasizes exact commands, observed results, pass/fail status, and remaining gaps.
+
+## File Convention
+
+When running via `scripts/dispatch.sh`, each agent is instructed to write its handoff to:
+
+```
+.devfleet/handoffs/<packet-id>.md
+```
+
+The `scripts/collect.sh --report` command assembles all handoffs into a single execution report.

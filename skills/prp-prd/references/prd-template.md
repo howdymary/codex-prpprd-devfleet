@@ -1,61 +1,145 @@
 # PRD Template
 
 ```md
-# <Feature Name> PRD
+# <Feature Name>
 
-## Summary
-- One paragraph: what this is, who it is for, and why it matters now.
+## Problem Statement
 
-## Problem
-- What is broken, missing, slow, or confusing today?
-- What evidence do we have from the user, product context, or repo state?
+{2-3 sentences: Who has what problem, and what's the cost of not solving it?}
 
-## Goals
-- Goal 1
-- Goal 2
-- Goal 3
+## Evidence
 
-## Non-Goals
-- Explicitly out of scope item 1
-- Explicitly out of scope item 2
+- {User quote, data point, or observation that proves this problem exists}
+- {Another piece of evidence}
+- {If none: "Assumption - needs validation through [method]"}
 
-## Users / Operators
-- Primary user or operator
-- Secondary stakeholder if relevant
+## Proposed Solution
 
-## Use Cases
-- Use case 1
-- Use case 2
-- Edge case worth protecting
+{One paragraph: What we're building and why this approach over alternatives}
 
-## User Experience / Behavior
-- What should the user or operator be able to do after this ships?
-- What should remain unchanged?
+## Key Hypothesis
 
-## Requirements
-- Functional requirement 1
-- Functional requirement 2
-- Operational requirement
+We believe {capability} will {solve problem} for {users}.
+We'll know we're right when {measurable outcome}.
 
-## Constraints
-- Technical constraint
-- Compliance or policy constraint
-- Timeline or dependency constraint
+## What We're NOT Building
 
-## Success Criteria
-- Observable outcome 1
-- Observable outcome 2
+- {Out of scope item 1} - {why}
+- {Out of scope item 2} - {why}
 
-## Acceptance Criteria
-- [ ] Criterion 1 written so it can be tested directly
-- [ ] Criterion 2
-- [ ] Criterion 3
+## Success Metrics
 
-## Risks
-- Risk
-- Mitigation
+| Metric | Target | How Measured |
+|--------|--------|--------------|
+| {Primary metric} | {Specific number} | {Method} |
+| {Secondary metric} | {Specific number} | {Method} |
 
 ## Open Questions
-- Question
-- Proposed default if unanswered
+
+- [ ] {Unresolved question 1}
+- [ ] {Unresolved question 2}
+
+---
+
+## Users & Context
+
+**Primary User**
+- **Who**: {Specific description}
+- **Current behavior**: {What they do today}
+- **Trigger**: {What moment triggers the need}
+- **Success state**: {What "done" looks like}
+
+**Job to Be Done**
+When {situation}, I want to {motivation}, so I can {outcome}.
+
+**Non-Users**
+{Who this is NOT for and why}
+
+---
+
+## Solution Detail
+
+### Core Capabilities (MoSCoW)
+
+| Priority | Capability | Rationale |
+|----------|------------|-----------|
+| Must | {Feature} | {Why essential} |
+| Must | {Feature} | {Why essential} |
+| Should | {Feature} | {Why important but not blocking} |
+| Could | {Feature} | {Nice to have} |
+| Won't | {Feature} | {Explicitly deferred and why} |
+
+### MVP Scope
+
+{What's the minimum to validate the hypothesis}
+
+### User Flow
+
+{Critical path - shortest journey to value}
+
+---
+
+## Technical Approach
+
+**Feasibility**: {HIGH/MEDIUM/LOW}
+
+**Architecture Notes**
+- {Key technical decision and why}
+- {Dependency or integration point}
+
+**Technical Risks**
+
+| Risk | Likelihood | Mitigation |
+|------|------------|------------|
+| {Risk} | {H/M/L} | {How to handle} |
+
+---
+
+## Implementation Phases
+
+<!--
+  STATUS: pending | in-progress | complete
+  PARALLEL: phases that can run concurrently (e.g., "with 3" or "-")
+  DEPENDS: phases that must complete first (e.g., "1, 2" or "-")
+-->
+
+| # | Phase | Description | Status | Parallel | Depends |
+|---|-------|-------------|--------|----------|---------|
+| 1 | {Phase name} | {What this phase delivers} | pending | - | - |
+| 2 | {Phase name} | {What this phase delivers} | pending | - | 1 |
+| 3 | {Phase name} | {What this phase delivers} | pending | with 4 | 2 |
+| 4 | {Phase name} | {What this phase delivers} | pending | with 3 | 2 |
+| 5 | {Phase name} | {What this phase delivers} | pending | - | 3, 4 |
+
+### Phase Details
+
+**Phase 1: {Name}**
+- **Goal**: {What we're trying to achieve}
+- **Scope**: {Bounded deliverables}
+- **Success signal**: {How we know it's done}
+
+{Continue for each phase...}
+
+---
+
+## Decisions Log
+
+| Decision | Choice | Alternatives | Rationale |
+|----------|--------|--------------|-----------|
+| {Decision} | {Choice} | {Options considered} | {Why this one} |
+
+---
+
+## Research Summary
+
+**Market Context**
+{Key findings from market research}
+
+**Technical Context**
+{Key findings from technical exploration}
+
+---
+
+*Generated: {timestamp}*
+*Status: DRAFT - needs validation*
 ```

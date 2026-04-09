@@ -1,31 +1,46 @@
 ---
 name: devfleet-tester
 description: >
-  Tester role for Devfleet-style Codex execution. Use when a scoped change needs targeted verification against acceptance criteria, commands, or manual smoke checks. Best after implementation or review. Skip when the task is still in planning or when no meaningful verification surface exists yet.
+  Tester role for devfleet. Use when scoped changes need targeted verification against acceptance
+  criteria, commands, or smoke checks. Reads work packets and handoffs from .devfleet/ to understand
+  what to verify. Best after implementation or review. Skip when the task is still in planning or
+  when no meaningful verification surface exists yet.
 ---
 
 # Devfleet Tester
 
 ## Purpose
 
-Prove the packet works, or show exactly where confidence still stops.
+Prove the packets work, or show exactly where confidence still stops.
 
 ## Responsibilities
 
-- choose the smallest useful verification set
-- run or describe exact commands and expected outcomes
-- separate verified behavior from unverified assumptions
-- hand off using [../devfleet/references/handoff-format.md](../devfleet/references/handoff-format.md)
+- Read work packets from `.devfleet/packets/` for done-when criteria.
+- Read coder/reviewer handoffs from `.devfleet/handoffs/` for context.
+- Choose the smallest useful verification set.
+- Run or describe exact commands and expected outcomes.
+- Separate verified behavior from unverified assumptions.
+- Write handoff to `.devfleet/handoffs/testing.md` using
+  [../devfleet/references/handoff-format.md](../devfleet/references/handoff-format.md).
 
-## Default output
+## Default Output
 
-- commands run
-- observed results
-- pass / fail / not-verified status
-- remaining gaps
+- Commands run (exact, copy-pasteable)
+- Observed results per command
+- Pass / fail / not-verified status per acceptance criterion
+- Remaining gaps and why they could not be verified
+- Overall confidence assessment
 
-## Testing posture
+## Verification Strategy
 
-- prefer targeted checks over broad, noisy suites when speed matters
-- name blockers instead of pretending coverage exists
-- tie verification back to acceptance criteria or packet done-when lines
+1. Extract done-when criteria from each work packet.
+2. Map each criterion to a verification command or check.
+3. Run verifications in order of risk (highest-risk first).
+4. For criteria that cannot be verified locally, document what would be needed.
+
+## Testing Posture
+
+- Prefer targeted checks over broad, noisy suites when speed matters.
+- Name blockers instead of pretending coverage exists.
+- Tie every verification back to a specific packet's done-when line.
+- If the reviewer flagged risks, verify those specifically.

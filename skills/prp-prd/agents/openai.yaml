@@ -1,7 +1,7 @@
 interface:
   display_name: "PRP / PRD"
-  short_description: "Turn ideas into build-ready spec packs"
-  default_prompt: "Use $prp-prd to turn this rough idea into a PRP, PRD, task plan, and review handoff."
+  short_description: "Hypothesis-driven specs via guided questioning"
+  default_prompt: "Use $prp-prd to turn this rough idea into a PRD, PRP, task plan, and review handoff through structured questioning."
 
 policy:
   allow_implicit_invocation: true

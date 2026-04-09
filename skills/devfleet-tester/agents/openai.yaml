@@ -1,7 +1,7 @@
 interface:
   display_name: "Devfleet Tester"
-  short_description: "Verify acceptance paths and test gaps"
-  default_prompt: "Use $devfleet-tester to verify this packet with the smallest useful command set and note any remaining gaps."
+  short_description: "Verify acceptance from work packets"
+  default_prompt: "Use $devfleet-tester to verify acceptance criteria from .devfleet/packets/ and report pass/fail per criterion."
 
 policy:
   allow_implicit_invocation: true
