@@ -1,0 +1,7 @@
+interface:
+  display_name: "Devfleet Reviewer"
+  short_description: "Review for bugs, regressions, and gaps"
+  default_prompt: "Use $devfleet-reviewer to review this packet for bugs, regressions, and missing tests."
+
+policy:
+  allow_implicit_invocation: true

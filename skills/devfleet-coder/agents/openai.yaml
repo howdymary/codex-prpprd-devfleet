@@ -1,0 +1,7 @@
+interface:
+  display_name: "Devfleet Coder"
+  short_description: "Implement one packet with clear ownership"
+  default_prompt: "Use $devfleet-coder to implement this scoped packet and report changed files, tests, and risks."
+
+policy:
+  allow_implicit_invocation: true

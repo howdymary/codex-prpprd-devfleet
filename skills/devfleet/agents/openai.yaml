@@ -1,0 +1,7 @@
+interface:
+  display_name: "Devfleet"
+  short_description: "Planner-to-tester workflow for Codex"
+  default_prompt: "Use $devfleet to break this work into planner, coder, reviewer, and tester handoffs."
+
+policy:
+  allow_implicit_invocation: true

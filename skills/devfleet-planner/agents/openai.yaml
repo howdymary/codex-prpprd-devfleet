@@ -1,0 +1,7 @@
+interface:
+  display_name: "Devfleet Planner"
+  short_description: "Plan scoped work packets before coding"
+  default_prompt: "Use $devfleet-planner to turn this task into scoped work packets with ownership and done-when criteria."
+
+policy:
+  allow_implicit_invocation: true
